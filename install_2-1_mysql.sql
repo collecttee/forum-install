@@ -58,7 +58,7 @@ CREATE TABLE {$db_prefix}roles (
 CREATE TABLE {$db_prefix}smerit_logs (
    id int(11) NOT NULL AUTO_INCREMENT,
    id_member int(11) NOT NULL,
-   number int(11) NOT NULL,
+   amount int(11) NOT NULL,
    create_at int(11) NOT NULL DEFAULT '0',
    PRIMARY KEY (id)
 ) ENGINE={$engine};
@@ -70,7 +70,7 @@ CREATE TABLE {$db_prefix}smerit_logs (
 CREATE TABLE {$db_prefix}smerit (
   id int(11) NOT NULL AUTO_INCREMENT,
   id_member int(11) NOT NULL DEFAULT '0',
-  number int(11) NOT NULL DEFAULT '0',
+  amount int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
