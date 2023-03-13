@@ -64,13 +64,13 @@ CREATE TABLE {$db_prefix}smerit_logs (
 ) ENGINE={$engine};
 
 #
-# Table structure for table `smerit`
+# Table structure for table `property`
 #
 
-CREATE TABLE {$db_prefix}smerit (
+CREATE TABLE {$db_prefix}property (
   id int(11) NOT NULL AUTO_INCREMENT,
   id_member int(11) NOT NULL DEFAULT '0',
-  amount int(11) NOT NULL DEFAULT '0',
+  smerit int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
