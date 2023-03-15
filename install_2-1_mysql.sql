@@ -88,6 +88,7 @@ CREATE TABLE {$db_prefix}property (
   id_member int(11) NOT NULL DEFAULT '0',
   smerit int(11) NOT NULL DEFAULT '0',
   merit int(11) NOT NULL DEFAULT '0',
+  emerit int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
