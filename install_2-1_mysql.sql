@@ -2,6 +2,13 @@
 #### Install script for MySQL 4.0.18+
 
 
+CREATE TABLE {$db_prefix}emerit_logs (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   id_member int(11) NOT NULL,
+   amount int(11) NOT NULL,
+   create_at int(11) NOT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE={$engine};
 
 #
 # Table structure for table `sender_merit`
