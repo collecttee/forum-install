@@ -1072,7 +1072,7 @@ CREATE TABLE {$db_prefix}polls (
 CREATE TABLE {$db_prefix}poll_choices (
 	id_poll MEDIUMINT UNSIGNED DEFAULT '0',
 	id_choice TINYINT UNSIGNED DEFAULT '0',
-	label VARCHAR(255) NOT NULL DEFAULT '',
+	label text NOT NULL DEFAULT '',
 	votes SMALLINT UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY (id_poll, id_choice)
 ) ENGINE={$engine};
