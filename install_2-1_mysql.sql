@@ -1,7 +1,20 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
+#
+# Table structure for table `smerit_transfer_log`
+#
+CREATE TABLE {$db_prefix}smerit_transfer_log (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   from int(11) NOT NULL,
+   to int(11) NOT NULL,
+   amount int(11) NOT NULL,
+   create_at int(11) NOT NULL DEFAULT '0',
+   PRIMARY KEY (id)
+) ENGINE={$engine};
 
-
+#
+# Table structure for table `emerit_logs`
+#
 CREATE TABLE {$db_prefix}emerit_logs (
    id int(11) NOT NULL AUTO_INCREMENT,
    id_member int(11) NOT NULL,
