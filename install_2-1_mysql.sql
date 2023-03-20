@@ -9,6 +9,7 @@ CREATE TABLE {$db_prefix}smerit_transfer_log (
    to int(11) NOT NULL,
    amount int(11) NOT NULL,
    create_at int(11) NOT NULL DEFAULT '0',
+   pool int(11) NOT NULL DEFAULT '0',
    PRIMARY KEY (id)
 ) ENGINE={$engine};
 
