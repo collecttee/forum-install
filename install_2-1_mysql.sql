@@ -1,6 +1,17 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
 #
+# Table structure for table `property_max`
+#
+CREATE TABLE {$db_prefix}property_max (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    flm_max_limit int(11) NOT NULL DEFAULT '0',
+    PRIMARY KEY (id)
+) ENGINE={$engine};
+
+
+
+#
 # Table structure for table `smerit_transfer_log`
 #
 CREATE TABLE {$db_prefix}smerit_transfer_log (
