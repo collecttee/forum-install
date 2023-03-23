@@ -1,5 +1,37 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
+### FLM ###
+
+
+#
+# Table structure for table `property_logs`
+#
+CREATE TABLE {$db_prefix}property_logs (
+ id int(11) NOT NULL AUTO_INCREMENT,
+ id_member int(11) NOT NULL,
+ amount int(11) NOT NULL,
+ from int(11) NOT NULL DEFAULT '0',
+ create_at int(11) NOT NULL DEFAULT '0',
+ property VARCHAR(255) NOT NULL DEFAULT '',
+ PRIMARY KEY (`id`)
+) ENGINE={$engine};
+
+#
+# Table structure for table `property_transfer_log`
+#
+CREATE TABLE {$db_prefix}property_transfer_log (
+     id int(11) NOT NULL AUTO_INCREMENT,
+     from int(11) NOT NULL,
+     to int(11) NOT NULL,
+     amount int(11) NOT NULL,
+     create_at int(11) NOT NULL DEFAULT '0',
+     pool int(11) NOT NULL DEFAULT '0',
+     property VARCHAR(255) NOT NULL DEFAULT '',
+     PRIMARY KEY (`id`)
+) ENGINE={$engine};
+
+
+
 #
 # Table structure for table `property_max`
 #
@@ -9,7 +41,7 @@ CREATE TABLE {$db_prefix}property_max (
     PRIMARY KEY (id)
 ) ENGINE={$engine};
 
-
+### MERIT ###
 
 #
 # Table structure for table `smerit_transfer_log`
@@ -57,6 +89,7 @@ CREATE TABLE {$db_prefix}source_user (
     id int(11) NOT NULL AUTO_INCREMENT,
     id_member int(11) NOT NULL,
     create_at int(11) NOT NULL,
+    source int(11) NOT NULL DEFAULT '0',
     PRIMARY KEY (id)
 ) ENGINE={$engine};
 
@@ -121,6 +154,8 @@ CREATE TABLE {$db_prefix}property (
   smerit int(11) NOT NULL DEFAULT '0',
   merit int(11) NOT NULL DEFAULT '0',
   emerit int(11) NOT NULL DEFAULT '0',
+  flm int(11) NOT NULL DEFAULT '0',
+  sflm int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
