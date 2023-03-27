@@ -4,6 +4,21 @@
 
 
 #
+# Table structure for table `sender_property`
+#
+CREATE TABLE {$db_prefix}sender_property (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   id_topic int(11) NOT NULL,
+   id_msg int(11) NOT NULL,
+   id_member int(11) NOT NULL,
+   amount int(11) NOT NULL DEFAULT '0',
+   create_at int(11) DEFAULT NULL,
+   property varchar(255) NOT NULL,
+   PRIMARY KEY (id)
+) ENGINE={$engine};
+
+
+#
 # Table structure for table `property_logs`
 #
 CREATE TABLE {$db_prefix}property_logs (
