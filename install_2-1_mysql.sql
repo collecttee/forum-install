@@ -1,6 +1,21 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
+
+
+
 ### FLM ###
+
+CREATE TABLE {$db_prefix}apply_withdraw (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_member int(11) NOT NULL,
+  type varchar(255) NOT NULL,
+  amount int(11) NOT NULL,
+  create_at int(11) DEFAULT NULL,
+  state int(11) NOT NULL DEFAULT '0',
+  complete int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (id)
+) ENGINE={$engine};
+
 
 
 #
