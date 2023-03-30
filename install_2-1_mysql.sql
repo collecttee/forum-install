@@ -5,6 +5,15 @@
 
 ### FLM ###
 
+CREATE TABLE {$db_prefix}exchange_limit (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  min int(11) NOT NULL DEFAULT '0',
+  max int(11) NOT NULL DEFAULT '0',
+  property varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE={$engine};
+
+
 CREATE TABLE {$db_prefix}apply_withdraw (
   id int(11) NOT NULL AUTO_INCREMENT,
   id_member int(11) NOT NULL,
