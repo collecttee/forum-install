@@ -1,8 +1,16 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
 
+### ZEALY XP ###
 
-
+CREATE TABLE {$db_prefix}zealy_config(
+ id int(11) NOT NULL AUTO_INCREMENT,
+ min int(11) NOT NULL DEFAULT '0',
+ max int(11) NOT NULL DEFAULT '0',
+ radio int(11) NOT NULL DEFAULT '0',
+ pause int(255) NOT NULL DEFAULT '0',
+ PRIMARY KEY (id)
+) ENGINE={$engine};
 ### FLM ###
 
 CREATE TABLE {$db_prefix}exchange_limit (
@@ -10,7 +18,7 @@ CREATE TABLE {$db_prefix}exchange_limit (
   min int(11) NOT NULL DEFAULT '0',
   max int(11) NOT NULL DEFAULT '0',
   property varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (id)
 ) ENGINE={$engine};
 
 
