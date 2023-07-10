@@ -18,6 +18,12 @@ $targetContract = '';
 
 $apiKey = '';
 
+$zealySubdomain = '';
+
+$zealyUserApiKey = '';
+
+$zealyLeaderboardApiKey = '';
+
 ########## Maintenance ##########
 /**
  * The maintenance "mode"
