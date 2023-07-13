@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a3027c8-8919-4c29-8ff4-a9b5154f23b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/Settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install_2-1_mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/install_2-1_mysql.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,9 @@
       <workItem from="1688543969074" duration="1721000" />
       <workItem from="1688631201648" duration="1012000" />
       <workItem from="1688807696282" duration="1327000" />
-      <workItem from="1688972561051" duration="1937000" />
+      <workItem from="1688972561051" duration="3385000" />
+      <workItem from="1689040671784" duration="1444000" />
+      <workItem from="1689233093034" duration="433000" />
     </task>
     <servers />
   </component>
@@ -77,8 +79,19 @@
         <option value="Default.Author" />
         <option value="Default.Date" />
         <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

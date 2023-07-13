@@ -31,6 +31,7 @@ CREATE TABLE {$db_prefix}apply_withdraw (
   state int(11) NOT NULL DEFAULT '0',
   complete int(11) NOT NULL DEFAULT '0',
   real_amount int(11) NOT NULL DEFAULT '0',
+  order_id int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
