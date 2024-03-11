@@ -1,6 +1,25 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
 
+CREATE TABLE {$db_prefix}realm_power (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   single_one varchar(255) DEFAULT NULL,
+   single_two varchar(255) DEFAULT NULL,
+   single_three varchar(255) DEFAULT NULL,
+   second varchar(255) DEFAULT NULL,
+   group_one varchar(255) DEFAULT NULL,
+   group_two varchar(255) DEFAULT NULL,
+   group_three varchar(255) DEFAULT NULL,
+   PRIMARY KEY (id)
+) ENGINE={$engine};
+CREATE TABLE  {$db_prefix}user_xp (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   address varchar(255) DEFAULT NULL,
+   xp int(11) NOT NULL DEFAULT '0',
+   update_time int(11) DEFAULT NULL,
+   PRIMARY KEY (id)
+) ENGINE={$engine};
+
 ### ZEALY XP ###
 
 CREATE TABLE {$db_prefix}zealy_config(
@@ -205,6 +224,7 @@ CREATE TABLE {$db_prefix}property (
   emerit int(11) NOT NULL DEFAULT '0',
   flm int(11) NOT NULL DEFAULT '0',
   sflm int(11) NOT NULL DEFAULT '0',
+  frp int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
@@ -946,6 +966,7 @@ CREATE TABLE {$db_prefix}members (
 	tfa_secret VARCHAR(24) NOT NULL DEFAULT '',
 	tfa_backup VARCHAR(64) NOT NULL DEFAULT '',
     address varchar(255) DEFAULT NULL,
+    btcaddress varchar(255) DEFAULT NULL,
     initialize_password int(1) NOT NULL DEFAULT '0',
     pid int(11) NOT NULL DEFAULT '0',
 	PRIMARY KEY (id_member),
