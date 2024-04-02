@@ -81,7 +81,7 @@ CREATE TABLE {$db_prefix}property_logs (
  from int(11) NOT NULL DEFAULT '0',
  create_at int(11) NOT NULL DEFAULT '0',
  property VARCHAR(255) NOT NULL DEFAULT '',
- PRIMARY KEY (`id`)
+ PRIMARY KEY (id)
 ) ENGINE={$engine};
 
 #
@@ -95,7 +95,7 @@ CREATE TABLE {$db_prefix}property_transfer_log (
      create_at int(11) NOT NULL DEFAULT '0',
      pool int(11) NOT NULL DEFAULT '0',
      property VARCHAR(255) NOT NULL DEFAULT '',
-     PRIMARY KEY (`id`)
+     PRIMARY KEY (id)
 ) ENGINE={$engine};
 
 
@@ -1202,7 +1202,7 @@ CREATE TABLE {$db_prefix}polls (
 CREATE TABLE {$db_prefix}poll_choices (
 	id_poll MEDIUMINT UNSIGNED DEFAULT '0',
 	id_choice TINYINT UNSIGNED DEFAULT '0',
-	label text NOT NULL DEFAULT '',
+    label VARCHAR(255) NOT NULL DEFAULT '',
 	votes SMALLINT UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY (id_poll, id_choice)
 ) ENGINE={$engine};
