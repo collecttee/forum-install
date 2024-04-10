@@ -6,10 +6,14 @@ CREATE TABLE {$db_prefix}realm_power (
    single_one varchar(255) DEFAULT NULL,
    single_two varchar(255) DEFAULT NULL,
    single_three varchar(255) DEFAULT NULL,
-   second varchar(255) DEFAULT NULL,
-   group_one varchar(255) DEFAULT NULL,
-   group_two varchar(255) DEFAULT NULL,
-   group_three varchar(255) DEFAULT NULL,
+    single_four varchar(255) DEFAULT NULL,
+    single_five varchar(255) DEFAULT NULL,
+    single_six varchar(255) DEFAULT NULL,
+    single_seven varchar(255) DEFAULT NULL,
+    boost_one varchar(255) DEFAULT NULL,
+    boost_two varchar(255) DEFAULT NULL,
+    boost_three varchar(255) DEFAULT NULL,
+    boost_four varchar(255) DEFAULT NULL,
    PRIMARY KEY (id)
 ) ENGINE={$engine};
 CREATE TABLE  {$db_prefix}user_xp (
@@ -78,7 +82,7 @@ CREATE TABLE {$db_prefix}property_logs (
  id int(11) NOT NULL AUTO_INCREMENT,
  id_member int(11) NOT NULL,
  amount int(11) NOT NULL,
- from int(11) NOT NULL DEFAULT '0',
+ `from` int(11) NOT NULL DEFAULT '0',
  create_at int(11) NOT NULL DEFAULT '0',
  property VARCHAR(255) NOT NULL DEFAULT '',
  PRIMARY KEY (id)
@@ -89,8 +93,8 @@ CREATE TABLE {$db_prefix}property_logs (
 #
 CREATE TABLE {$db_prefix}property_transfer_log (
      id int(11) NOT NULL AUTO_INCREMENT,
-     from int(11) NOT NULL,
-     to int(11) NOT NULL,
+     `from` int(11) NOT NULL,
+     `to` int(11) NOT NULL,
      amount int(11) NOT NULL,
      create_at int(11) NOT NULL DEFAULT '0',
      pool int(11) NOT NULL DEFAULT '0',
@@ -116,8 +120,8 @@ CREATE TABLE {$db_prefix}property_max (
 #
 CREATE TABLE {$db_prefix}smerit_transfer_log (
    id int(11) NOT NULL AUTO_INCREMENT,
-   from int(11) NOT NULL,
-   to int(11) NOT NULL,
+   `from` int(11) NOT NULL,
+   `to` int(11) NOT NULL,
    amount int(11) NOT NULL,
    create_at int(11) NOT NULL DEFAULT '0',
    pool int(11) NOT NULL DEFAULT '0',
@@ -207,7 +211,7 @@ CREATE TABLE {$db_prefix}smerit_logs (
    id int(11) NOT NULL AUTO_INCREMENT,
    id_member int(11) NOT NULL,
    amount int(11) NOT NULL,
-   from int(11) NOT NULL DEFAULT '0',
+   `from` int(11) NOT NULL DEFAULT '0',
    create_at int(11) NOT NULL DEFAULT '0',
    PRIMARY KEY (id)
 ) ENGINE={$engine};

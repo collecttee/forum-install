@@ -38,6 +38,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\forum-install" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +80,8 @@
       <workItem from="1710141584546" duration="2100000" />
       <workItem from="1710229575628" duration="2378000" />
       <workItem from="1712025172417" duration="1068000" />
-      <workItem from="1712028737612" duration="691000" />
+      <workItem from="1712028737612" duration="2137000" />
+      <workItem from="1712542183667" duration="3468000" />
     </task>
     <servers />
   </component>
