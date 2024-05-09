@@ -1,6 +1,15 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
 
+CREATE TABLE {$db_prefix}fcp_config(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    token varchar(255) DEFAULT NULL,
+    radio int(11) NOT NULL DEFAULT '0',
+    pause int(255) NOT NULL DEFAULT '0',
+    PRIMARY KEY (id)
+    ) ENGINE={$engine};
+
+
 CREATE TABLE {$db_prefix}realm_power (
    id int(11) NOT NULL AUTO_INCREMENT,
    single_one varchar(255) DEFAULT NULL,
@@ -14,6 +23,7 @@ CREATE TABLE {$db_prefix}realm_power (
     boost_two varchar(255) DEFAULT NULL,
     boost_three varchar(255) DEFAULT NULL,
     boost_four varchar(255) DEFAULT NULL,
+    boost_five varchar(255) DEFAULT NULL,
    PRIMARY KEY (id)
 ) ENGINE={$engine};
 CREATE TABLE  {$db_prefix}user_xp (
