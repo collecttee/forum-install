@@ -65,6 +65,8 @@ CREATE TABLE {$db_prefix}apply_withdraw (
   complete int(11) NOT NULL DEFAULT '0',
   real_amount int(11) NOT NULL DEFAULT '0',
   order_id int(11) NOT NULL DEFAULT '0',
+   token_id int(11) NOT NULL DEFAULT '0',
+    address varchar(255) DEFAULT NULL
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
