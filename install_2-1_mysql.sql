@@ -1,5 +1,13 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
+CREATE TABLE {$db_prefix}invitation_code (
+   id int(11) NOT NULL AUTO_INCREMENT,
+   created_user int(11) NOT NULL,
+   code varchar(255) NOT NULL,
+   used_user int(11) NOT NULL DEFAULT '0',
+   used_time int(11) NOT NULL DEFAULT '0',
+   PRIMARY KEY (id)
+) ENGINE={$engine};
 
 CREATE TABLE {$db_prefix}fcp_config(
     id int(11) NOT NULL AUTO_INCREMENT,
@@ -2404,7 +2412,8 @@ VALUES ('smfVersion', '{$smf_version}'),
 	('attachments_21_done', '1'),
 	('displayFields', '[{"col_name":"cust_icq","title":"ICQ","type":"text","order":"1","bbc":"0","placement":"1","enclose":"<a class=\\"icq\\" href=\\"\\/\\/www.icq.com\\/people\\/{INPUT}\\" target=\\"_blank\\" title=\\"ICQ - {INPUT}\\"><img src=\\"{DEFAULT_IMAGES_URL}\\/icq.png\\" alt=\\"ICQ - {INPUT}\\"><\\/a>","mlist":"0"},{"col_name":"cust_skype","title":"Skype","type":"text","order":"2","bbc":"0","placement":"1","enclose":"<a href=\\"skype:{INPUT}?call\\"><img src=\\"{DEFAULT_IMAGES_URL}\\/skype.png\\" alt=\\"{INPUT}\\" title=\\"{INPUT}\\" \\/><\\/a> ","mlist":"0"},{"col_name":"cust_loca","title":"Location","type":"text","order":"4","bbc":"0","placement":"0","enclose":"","mlist":"0"},{"col_name":"cust_gender","title":"Gender","type":"radio","order":"5","bbc":"0","placement":"1","enclose":"<span class=\\" main_icons gender_{KEY}\\" title=\\"{INPUT}\\"><\\/span>","mlist":"0","options":["None","Male","Female"]}]'),
 	('minimize_files', '1'),
-	('securityDisable_moderate', '1');
+	('securityDisable_moderate', '1'),
+    ('invitation_amount', '100');
 
 # --------------------------------------------------------
 
