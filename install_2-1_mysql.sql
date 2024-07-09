@@ -1,5 +1,13 @@
 #### ATTENTION: You do not need to run or use this file!  The install.php script does everything for you!
 #### Install script for MySQL 4.0.18+
+CREATE TABLE smf_mining (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_member int(11) NOT NULL,
+  amount varchar(255) NOT NULL DEFAULT '0',
+  mod int(11) NOT NULL DEFAULT '0',
+  create_at int(11) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE={$engine};
 CREATE TABLE {$db_prefix}invitation_code (
    id int(11) NOT NULL AUTO_INCREMENT,
    created_user int(11) NOT NULL,
@@ -250,6 +258,7 @@ CREATE TABLE {$db_prefix}property (
   flm int(11) NOT NULL DEFAULT '0',
   sflm int(11) NOT NULL DEFAULT '0',
   frp int(11) NOT NULL DEFAULT '0',
+  fgp int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE={$engine};
 
@@ -1002,6 +1011,7 @@ CREATE TABLE {$db_prefix}members (
     role int(11) NOT NULL DEFAULT '0',
     remake varchar(255) DEFAULT NULL,
     status int(11) NOT NULL DEFAULT '0',
+    code varchar(255) DEFAULT NULL,
 	PRIMARY KEY (id_member),
 	INDEX idx_member_name (member_name),
 	INDEX idx_real_name (real_name),
